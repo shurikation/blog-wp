@@ -93,8 +93,9 @@
     <section class="projects main__projects" id="works"><img class="brushstrokes projects__brushstrokes--top"
                                                              src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
         <div class="container"><h2 class="projects__title main-title">&lt;Проекты&#47;&#62;</h2>
-            <div class="projects__content">
-                <div class="projects__thumbnail thumbnail"><h4 class="thumbnail__title sub-title">Notebook App</h4>
+            <ul class="projects__content">
+                <li class="projects__thumbnail thumbnail">
+                    <h4 class="thumbnail__title sub-title">Notebook App</h4>
                     <div class="thumbnail__content"><img class="thumbnail__image"
                                                          src="<?php echo bloginfo('template_url'); ?>/assets/works/notebook_app-small.jpg" alt="приложение">
                         <nav class="thumbnail__overlay">
@@ -112,10 +113,12 @@
                             </ul>
                         </nav>
                     </div>
-                </div>
-                <div class="projects__thumbnail thumbnail"><h4 class="thumbnail__title sub-title">Landing-page &laquo;Suppke&raquo;</h4>
-                    <div class="thumbnail__content"><img class="thumbnail__image" src="<?php echo bloginfo('template_url'); ?>/assets/works/suppke-small.jpg"
-                                                         alt="сайт">
+                </li>
+                <li class="projects__thumbnail thumbnail">
+                    <h4 class="thumbnail__title sub-title">Landing-page &laquo;Suppke&raquo;</h4>
+                    <div class="thumbnail__content">
+                        <img class="thumbnail__image" src="<?php echo bloginfo('template_url'); ?>/assets/works/suppke-small.jpg"
+                             alt="сайт">
                         <nav class="thumbnail__overlay">
                             <ul class="thumbnail__list">
                                 <li class="thumbnail__item thumbnail__item--top fromTopToBottom"><a
@@ -132,8 +135,8 @@
                             </ul>
                         </nav>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
         <img class="brushstrokes projects__brushstrokes--bottom" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
     </section>

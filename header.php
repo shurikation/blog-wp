@@ -17,7 +17,7 @@
 <header class="main-header">
     <div class="container">
         <nav class="main-header__nav nav">
-            <span class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span>-->
+            <span class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span>
             <div class="main-header__menu menu">
                 <div class="container">
                     <ul class="menu__list">
