@@ -1,40 +1,11 @@
 <?php
 /*
- Template Name: Статья в блог
+ Template Name: Пост
 */
 ?>
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Александр Попов | Блог</title>
-    <?php
-        wp_head();
-    ?>
-</head>
-<body>
-<header class="main-header">
-    <div class="container">
-        <nav class="main-header__nav nav"><a href="#"><span
-                    class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span></a>
-            <div class="main-header__menu menu">
-                <div class="container">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a class="menu__link" target="_blank" rel="noopener"
-                                                  href="../index.html">Главная</a></li>
-                        <li class="menu__item"><a class="menu__link" target="_blank" rel="noopener"
-                                                  href="../index.html#about">Обо мне</a></li>
-                        <li class="menu__item"><a class="menu__link" target="_blank" rel="noopener"
-                                                  href="../index.html#works">Проекты</a></li>
-                    </ul>
-                </div>
-            </div>
-            <button type="button" class="header__toggler"></button>
-        </nav>
-    </div>
-</header>
+<?php
+get_header();
+?>
 <main>
     <article>
         <div class="intro template__intro" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/intro/suppke-large.jpg); background-position: 75% 0;">

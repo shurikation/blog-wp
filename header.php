@@ -31,11 +31,6 @@
                         'depth'           => 1, //уровень вложенности меню
                     ] );
                     ?>
-<!--                    <ul class="menu__list">-->
-<!--                        <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>-->
-<!--                        <li class="menu__item"><a class="menu__link" href="#about">Пост в блог</a></li>-->
-<!--                        <li class="menu__item"><a class="menu__link" href="#works">Проекты</a></li>-->
-<!--                    </ul>-->
                 </div>
             </div>
             <button type="button" class="header__toggler"></button>
