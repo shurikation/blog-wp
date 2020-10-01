@@ -20,11 +20,22 @@
             <span class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span>
             <div class="main-header__menu menu">
                 <div class="container">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a class="menu__link" href="#">Наверх</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#about">Обо мне</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#works">Проекты</a></li>
-                    </ul>
+                    <?php
+                    wp_nav_menu( [
+                        'menu'            => 'Main', //Название меню в админке
+                        'container'       => false, //div или nav или false
+                        'menu_class'      => 'menu__list', //class в <ul>
+                        'echo'            => true, //вывести на страницу или вернуть (записать в переменную)
+                        'fallback_cb'     => 'wp_page_menu',
+                        'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
+                        'depth'           => 1, //уровень вложенности меню
+                    ] );
+                    ?>
+<!--                    <ul class="menu__list">-->
+<!--                        <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>-->
+<!--                        <li class="menu__item"><a class="menu__link" href="#about">Пост в блог</a></li>-->
+<!--                        <li class="menu__item"><a class="menu__link" href="#works">Проекты</a></li>-->
+<!--                    </ul>-->
                 </div>
             </div>
             <button type="button" class="header__toggler"></button>

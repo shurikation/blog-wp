@@ -58,7 +58,7 @@
         </div>
     </section>
     <section class="about main__about" id="about">
-        <img class="brushstrokes about__brushstrokes" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
+        <img class="brushstrokes about__brushstrokes" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush strokes">
         <div class="container">
             <h2 class="about__title main-title">&lt;Обо мне&#47;&#62;</h2>
             <div class="about__content">
