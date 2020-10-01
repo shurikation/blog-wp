@@ -60,26 +60,20 @@
     <section class="about main__about" id="about">
         <img class="brushstrokes about__brushstrokes" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush strokes">
         <div class="container">
-            <h2 class="about__title main-title">&lt;Обо мне&#47;&#62;</h2>
+            <h2 class="about__title main-title"><?php the_field('about_title');?></h2>
             <div class="about__content">
-             <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/about/profile.jpg" alt="shurikation">
+             <img class="about__image" src="<?php the_field('about_img');?>" alt="shurikation">
                 <div class="about__info">
                     <div class="about__description">
-                        <p class="description__text main-text">Привет, я Александр.
-                            Занимаюсь разработкой фронтенд-приложений. Меня вдохновляет качественная верстка,
-                            оптимальные решения, понятный и чистый код.</p>
-                        <p class="description__text main-text">Увлекаюсь изучением английского языка примерно на уровне
-                            Intermediate. Периодически делаю переводы свежих англоязычных статей на тему фронтенда.
-                            Ознакомиться с публикациями можно в моем блоге на
-                            <a class="description__link--medium" target="_blank" rel="nofollow noopener" href="https://medium.com/@shurikation">medium</a>.
+                        <p class="description__text main-text">
+                            <?php the_field('about_descr');?>
                         </p>
-                        <p class="description__text main-text">Люблю читать книги, бег по утрам и фитнес.</p>
                         <h3 class="description__text main-text">Контакты:</h3>
                         <address>
                             <ul>
                                 <li><a class="description__link email-link main-text" target="_blank"
                                        rel="nofollow noopener"
-                                       href="mailto:rupopovalex@gmail.com">rupopovalex@gmail.com</a></li>
+                                       href="mailto:rupopovalex@gmail.com"><?php the_field('mail', 2); ?></a></li>
                                 <li><a class="description__link telegram-link main-text" target="_blank"
                                        rel="nofollow noopener" href="https://t.me/shurikation">@shurikation</a></li>
                             </ul>
@@ -143,6 +137,46 @@
     <section class="blog">
         <div class="container"><h2 class="main-title">&lt;Блог&#47;&#62;</h2>
             <div class="blog__wrapper">
+                <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
+                    <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
+                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
+                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
+                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
+                                class="post__button button" target="_blank" rel="noopener"
+                                href="blog/post-template.html">Далее...</a></div>
+                </div>
+                <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
+                    <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
+                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
+                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
+                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
+                                class="post__button button" target="_blank" rel="noopener"
+                                href="blog/post-template.html">Далее...</a></div>
+                </div>
+                <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
+                    <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
+                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
+                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
+                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
+                                class="post__button button" target="_blank" rel="noopener"
+                                href="blog/post-template.html">Далее...</a></div>
+                </div>
+                <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
+                    <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
+                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
+                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
+                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
+                                class="post__button button" target="_blank" rel="noopener"
+                                href="blog/post-template.html">Далее...</a></div>
+                </div>
+                <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
+                    <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
+                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
+                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
+                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
+                                class="post__button button" target="_blank" rel="noopener"
+                                href="blog/post-template.html">Далее...</a></div>
+                </div>
                 <div class="blog__post post"><img class="post__image" src="<?php echo bloginfo('template_url'); ?>/assets/blog/picture_1.jpg" alt="picture">
                     <div class="post__info"><h3 class="post__title">Как использовать методы map, filter, reduce</h3>
                         <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
