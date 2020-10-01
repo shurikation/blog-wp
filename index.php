@@ -5,7 +5,8 @@ get_header();
     <section class="intro main__intro">
         <div class="container">
             <div class="intro__wrapper">
-                <div><h1 class="intro__title hidden">Блог веб-разработчика</h1>
+                <div>
+                    <h1 class="intro__title hidden">Блог веб-разработчика</h1>
                     <h2 class="intro__subtitle hidden">Веб-разработчик Александр Попов</h2>
                     <h3 class="intro__title">Александр Попов</h3>
                     <p class="intro__subtitle intro__subtitle--autoText"></p>
@@ -85,121 +86,11 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="projects main__projects" id="works"><img class="brushstrokes projects__brushstrokes--top"
-                                                             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png"
-                                                             alt="краска">
-        <div class="container">
-            <h2>&lt;Проекты&#47;&#62;</h2>
-            <ul class="projects__content">
-                <?php
-                $posts = get_posts(array(
-                    'numberposts' => 0, //чтобы вывести ВСЕ посты
-                    'category_name' => 'projects', //выводим только рубрику projects
-                    'orderby' => 'date',
-                    'order' => 'ASC', //DESC - прямой порядок
-                    'post_type' => 'post',
-                    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                ));
-                foreach ($posts as $post) {
-                    setup_postdata($post);
-                    ?>
+<!--    PROJECTS-->
+<!--    PROJECTS END-->
 
-                    <li class="projects__thumbnail thumbnail">
-                        <h4 class="thumbnail__title sub-title"><?php the_title(); ?></h4>
-                        <div class="thumbnail__content">
-                            <img class="thumbnail__image" src="<?php the_field('project_img'); ?>" alt="проект">
-                            <nav class="thumbnail__overlay">
-                                <ul class="thumbnail__list">
-                                    <li class="thumbnail__item thumbnail__item--top fromTopToBottom"><a
-                                                class="thumbnail__link sub-title" target="_blank"
-                                                href="pages/notebook-app.html">Описание проекта</a></li>
-                                    <li class="thumbnail__item">
-                                        <a class="thumbnail__link git-href sub-title"
-                                           target="_blank" rel="nofollow noopener"
-                                           href="<?php the_field('project_git-link'); ?>">Код на
-                                            GitHub</a></li>
-                                    <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
-                                        <a class="thumbnail__link sub-title" target="_blank"
-                                           rel="nofollow noopener"
-                                           href="https://notebook-js-app.web.app/">Перейти на сайт</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </li>
-                    <!--                <li class="projects__thumbnail thumbnail">-->
-                    <!--                    <h4 class="thumbnail__title sub-title">--><?php //the_title(); ?><!--</h4>-->
-                    <!--                    <div class="thumbnail__content">-->
-                    <!--                        <img class="thumbnail__image" src="--><?php //echo bloginfo('template_url'); ?><!--/assets/works/suppke-small.jpg"-->
-                    <!--                             alt="сайт">-->
-                    <!--                        <nav class="thumbnail__overlay">-->
-                    <!--                            <ul class="thumbnail__list">-->
-                    <!--                                <li class="thumbnail__item thumbnail__item--top fromTopToBottom"><a-->
-                    <!--                                            class="thumbnail__link sub-title" target="_blank" rel="nofollow noopener"-->
-                    <!--                                            href="pages/suppke.html">Описание проекта</a></li>-->
-                    <!--                                <li class="thumbnail__item"><a class="thumbnail__link git-href sub-title"-->
-                    <!--                                                               href="https://github.com/shurikation/suppke-landing"-->
-                    <!--                                                               target="_blank" rel="nofollow noopener">Код на GitHub</a>-->
-                    <!--                                </li>-->
-                    <!--                                <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop"><a-->
-                    <!--                                            class="thumbnail__link sub-title"-->
-                    <!--                                            href="https://shurikation.github.io/suppke-landing/dist/index.html"-->
-                    <!--                                            target="_blank" rel="nofollow noopener">Перейти на сайт</a></li>-->
-                    <!--                            </ul>-->
-                    <!--                        </nav>-->
-                    <!--                    </div>-->
-                    <!--                </li>-->
-
-                    <?php
-                }
-                wp_reset_postdata();
-                ?>
-            </ul>
-        </div>
-        <img class="brushstrokes projects__brushstrokes--bottom"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
-    </section>
-    <section class="blog">
-        <div class="container">
-            <h2 class="main-title">&lt;Блог&#47;&#62;</h2>
-            <div class="blog__wrapper">
-                <!--                POSTS-->
-                <div class="blog__post post"><img class="post__image"
-                                                  src="<?php echo bloginfo('template_url'); ?>/assets/blog/map-filter-reduce.jpeg"
-                                                  alt="picture">
-                    <div class="post__info"><h3 class="post__title">Как использовать Map, Filter и Reduce</h3>
-                        <p class="main-text">Если вы спросите разработчика «Какие методы для работы с массивами в
-                            JavaScript наиболее важны?», то Вы, скорее всего, услышите упоминание о map, filter и
-                            reduce. Эти 3 мощных метода позволяют вам перебирать содержимое массива...</p><a
-                                class="post__button button" target="_blank" rel="noopener"
-                                href="blog/post-template.html">Далее...</a>
-                    </div>
-                </div>
-                <div class="blog__post post"><img class="post__image"
-                                                  src="<?php echo bloginfo('template_url'); ?>/assets/blog/polymorph.jpeg"
-                                                  alt="picture">
-                    <div class="post__info"><h3 class="post__title">Полиморфизм в JavaScript</h3>
-                        <p class="main-text">Долгое время я думал, что полиморфизм— это превращение кого-либо в овцу
-                            (спасибо, Warcraft). Этот образ из игры настолько прочно засел у меня в голове, что мне было
-                            непросто отказаться от него во время изучения концепции полиморфизма в программировании.</p>
-                        <a
-                                class="post__button button" target="_blank" rel="noopener"
-                                href="blog/post-template.html">Далее...</a>
-                    </div>
-                </div>
-                <div class="blog__post post">
-                    <img class="post__image"
-                         src="<?php echo bloginfo('template_url'); ?>/assets/blog/map-filter-reduce.jpeg" alt="picture">
-                    <div class="post__info">
-                        <h3 class="post__title">Паттерн Factory на JavaScript</h3>
-                        <p class="main-text">Паттерн Factory на JavaScript</p><a
-                                class="post__button button" target="_blank" rel="noopener"
-                                href="blog/post-template.html">Далее...</a>
-                    </div>
-                </div>
-                <!--             POSTS END-->
-            </div>
-        </div>
-    </section>
+<!--    BLOG-->
+<!--    BLOG ENDS-->
 </main>
 <?php
 get_footer();
