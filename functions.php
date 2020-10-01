@@ -11,6 +11,7 @@ function blog_scripts() {
 }
 
 add_theme_support( 'custom-logo' );
+add_theme_support( 'post-thumbnails' );
 add_theme_support( 'menus' );
 
 add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3); //3 аргумента, 10 - приоритет станартный
@@ -21,7 +22,6 @@ function filter_nav_menu_link_attributes($atts, $item, $args)
     if ($args->menu === 'Main') //если это главное меню
     {
         $atts['class'] = 'menu__link'; //таким образом добавляем класс в аттрибу ссылок
-
     }
     return $atts;
 }
@@ -41,9 +41,6 @@ function filter_nav_menu_list_attributes( $atts, $item, $args ){
             $atts['class'] .= ' menu__item--active';
         }
     }
-
-
-
     return $atts;
 }
 ?>
