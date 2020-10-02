@@ -15,7 +15,7 @@
                 'numberposts' => 0, //чтобы вывести ВСЕ посты
                 'category_name' => 'blog', //выводим только рубрику projects
                 'orderby' => 'date',
-                'order' => 'ASC', //DESC - прямой порядок
+                'order' => 'DESC', //DESC - прямой порядок, ASC - обратный порядок
                 'post_type' => 'post',
                 'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
             ));
@@ -30,7 +30,7 @@
                         <h2 class="post__title"><?php the_title();?></h2>
                         <p class="main-text"><?php the_field('blog_text');?></p>
                         <a class="post__button button" target="_blank" rel="noopener"
-                           href="#">Далее...</a>
+                           href="<?php echo get_permalink();?>">Далее...</a>
                     </div>
                 </div>
                 <?php

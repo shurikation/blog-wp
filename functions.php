@@ -20,6 +20,7 @@ add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3)
 function filter_nav_menu_link_attributes($atts, $item, $args)
 {
     if ($args->menu === 'Main') //если это главное меню
+
     {
         $atts['class'] = 'menu__link'; //таким образом добавляем класс в аттрибу ссылок
     }
@@ -29,12 +30,16 @@ function filter_nav_menu_link_attributes($atts, $item, $args)
 //item - каждая отдельная ссылка
 //args - все аргументы меню (все что есть в wp_nav_menu())
 
-//Этот хук отловит все аттрибуты у наших динамических лишек
+//Этот хук отловит все аттрибуты у наших динамических ли-шек
 add_filter( 'nav_menu_css_class', 'filter_nav_menu_list_attributes', 10, 4 );
 function filter_nav_menu_list_attributes( $atts, $item, $args ){
     if($args->menu === 'Main') {
         $atts['class'] = 'menu__item';
 
+        //Если я нахожусь в категории БЛОГ, и в цикле мы выводим меню с ID который соотвествует блогу,то
+        if( $item->ID === 56 && (in_category('blog'))) {
+            $atts['class'] .= ' menu__item--active';
+        }
         //чтобы подсвечивать активную ссылку
         if ($item->current) //если текущая страница, на которой находимся, является активной, то берем ссылку и назначаем ей новый класс
         {
@@ -44,3 +49,4 @@ function filter_nav_menu_list_attributes( $atts, $item, $args ){
     return $atts;
 }
 ?>
+
