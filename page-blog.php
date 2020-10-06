@@ -39,6 +39,7 @@ get_header();
                 if ( $custom_query->have_posts() ) :
                 while ( $custom_query->have_posts() ) :
                 $custom_query->the_post(); ?>
+<!--                POST TEMPLATE-->
                 <article class="blog__single-post single-post">
                     <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
                          alt="<?php the_field('blog_alt'); ?>">
@@ -57,14 +58,12 @@ get_header();
             </section>
             <!--            PAGE NAVIGATION-->
             <?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
-                <nav id="page-nav">
-                    <h1 class="hide">Page Navigation</h1>
-                    <ul class="clear-fix">
-                        <li class="prev-link"><?php next_posts_link('« Previous 10 Page') ?></li>
-                        <li class="next-link"><?php previous_posts_link('Next 10 Page »', $custom_query->max_num_pages) ?></li>
+                <nav class="template__pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item"><?php previous_posts_link('&lt; Предыдущие посты', $custom_query->max_num_pages) ?></li>
+                        <li class="pagination__item"><?php next_posts_link('Следующие посты &#62;') ?></li>
                     </ul>
                 </nav>
-
             <?php endif; ?>
             <?php
             // Reset main query object
