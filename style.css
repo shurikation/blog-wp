@@ -196,7 +196,7 @@ input[type=email], textarea {
 .main-title, .sub-title {
     color: #373636;
     text-align: center;
-    padding-top: 20px
+    padding-top: 5px
 }
 
 .main-title, .main-title:hover {
@@ -214,7 +214,8 @@ input[type=email], textarea {
 .main-text {
     color: #373636;
     text-align: justify;
-    line-height: 1.3em
+    line-height: 1.3em;
+    padding: 5px 0
 }
 
 .button {
@@ -237,6 +238,10 @@ input[type=email], textarea {
 
 .brushstrokes {
     width: 100%
+}
+
+.ta-left {
+    text-align: left
 }
 
 @media (min-width: 576px) {
@@ -273,11 +278,13 @@ input[type=email], textarea {
     }
 
     .main-title {
-        font-size: 28px
+        font-size: 28px;
+        padding-top: 20px
     }
 
     .sub-title {
-        font-size: 20px
+        font-size: 20px;
+        padding-top: 20px
     }
 
     .main-text {
@@ -1048,9 +1055,6 @@ input[type=email], textarea {
 }
 
 @media (min-width: 992px) {
-    .projects__title {
-        padding-top: 0
-    }
 
     .projects__content {
         display: flex;
@@ -1069,6 +1073,7 @@ input[type=email], textarea {
 .blog__single-post {
     margin-bottom: 35px
 }
+
 
 .single-post, .single-post__info {
     display: flex;
@@ -1121,6 +1126,7 @@ input[type=email], textarea {
     margin: 0 auto
 }
 
+
 .pagination__list {
     display: flex;
     justify-content: space-around;
@@ -1164,6 +1170,11 @@ input[type=email], textarea {
 }
 
 @media (min-width: 992px) {
+    .post-container {
+        margin: 0 auto;
+        max-width: 830px
+    }
+
     .single-post {
         flex-direction: row
     }
@@ -1205,10 +1216,6 @@ input[type=email], textarea {
 
 .template-title {
     padding-top: 15vh
-}
-
-.template__subtitle {
-    text-align: left
 }
 
 .template__text {

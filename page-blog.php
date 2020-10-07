@@ -8,13 +8,15 @@ get_header();
 ?>
 <main>
     <section class="template__wrapper">
-        <div class="intro template__intro" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/blog/blog-wallpaper-1920-768-3.jpg); background-position: 40% 0;">
+        <div class="intro template__intro"
+             style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/blog/blog-wallpaper-1920-768-3.jpg); background-position: 40% 0;">
             <h1 class="container intro__title template-title">Блог</h1>
         </div>
-        <img class="brushstrokes about__brushstrokes" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush stroke">
+        <img class="brushstrokes about__brushstrokes"
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush stroke">
         <div class="container">
             <section class="template__content blog">
-<?php
+                <?php
                 // Define custom query parameters
                 $custom_query_args = array(
                     'numberposts' => 0, //чтобы вывести последние 3 поста
@@ -25,39 +27,39 @@ get_header();
                     'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса);
                 );
                 // Get current page and append to custom query parameters array
-                $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+                $custom_query_args['paged'] = get_query_var('paged') ? get_query_var('paged') : 1;
 
                 // Instantiate custom query
-                $custom_query = new WP_Query( $custom_query_args );
+                $custom_query = new WP_Query($custom_query_args);
 
                 // Pagination fix
                 $temp_query = $wp_query;
-                $wp_query   = NULL;
-                $wp_query   = $custom_query;
+                $wp_query = NULL;
+                $wp_query = $custom_query;
 
                 // Output custom query loop
-                if ( $custom_query->have_posts() ) :
-                while ( $custom_query->have_posts() ) :
-                $custom_query->the_post(); ?>
-<!--                POST TEMPLATE-->
-                <article class="blog__single-post single-post">
-                    <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
-                         alt="<?php the_field('blog_alt'); ?>">
-                    <div class="single-post__info">
-                        <h3 class="single-post__title"><?php the_title(); ?></h3>
-                        <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
-                        <a class="single-post__button button" target="_blank" rel="noopener"
-                           href="<?php echo get_permalink(); ?>">Далее</a>
-                    </div>
-                </article>
-                <?php
-                endwhile;
+                if ($custom_query->have_posts()) :
+                    while ($custom_query->have_posts()) :
+                        $custom_query->the_post(); ?>
+                        <!--                POST TEMPLATE-->
+                        <article class="blog__single-post single-post">
+                            <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
+                                 alt="<?php the_field('blog_alt'); ?>">
+                            <div class="single-post__info">
+                                <h2 class="single-post__title"><?php the_title(); ?></h2>
+                                <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
+                                <a class="single-post__button button" target="_blank" rel="noopener"
+                                   href="<?php echo get_permalink(); ?>">Далее</a>
+                            </div>
+                        </article>
+                    <?php
+                    endwhile;
                 endif;
                 wp_reset_postdata();
                 ?>
             </section>
             <!--            PAGE NAVIGATION-->
-            <?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
+            <?php if ($wp_query->max_num_pages > 1) : // if there's more than one page turn on pagination ?>
                 <nav class="template__pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item"><?php previous_posts_link('&lt; Предыдущие посты', $custom_query->max_num_pages) ?></li>

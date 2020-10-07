@@ -87,8 +87,60 @@ get_header();
         </div>
     </section>
 <!--    PROJECTS-->
+    <section class="projects main__projects">
+        <img class="brushstrokes projects__brushstrokes--top"
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
+        <div class="container">
+            <a target="_blank" rel="noopener" href="<?php echo get_permalink();?>projects">
+                <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
+            </a>
+            <div class="projects__content">
+                <!--ALL POSTS IN THE LOOP-->
+                <?php
+                $posts = get_posts(array(
+                    'numberposts' => 3, //чтобы вывести последние 3 поста
+                    'category_name' => 'projects', //выводим только рубрику blog
+                    'orderby' => 'date',
+                    'order' => 'DESC', //DESC - прямой порядок, ASC - обратный порядок
+                    'post_type' => 'post',
+                    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                ));
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+                    ?>
+                    <li class="projects__thumbnail thumbnail">
+                        <h3 class="thumbnail__title sub-title"><?php the_title();?></h3>
+                        <div class="thumbnail__content">
+                            <img class="thumbnail__image" src="<?php the_field('project_img');?>" alt="скриншот проекта">
+                            <nav class="thumbnail__overlay">
+                                <ul class="thumbnail__list">
+                                    <li class="thumbnail__item thumbnail__item--top fromTopToBottom"><a
+                                                class="thumbnail__link sub-title" target="_blank" rel="noopener"
+                                                href="<?php echo get_permalink();?>">Описание проекта</a></li>
+                                    <li class="thumbnail__item">
+                                        <a class="thumbnail__link git-href sub-title"
+                                           target="_blank" rel="nofollow noopener"
+                                           href="<?php the_field('project_git-link'); ?>">Код на
+                                            GitHub</a></li>
+                                    <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
+                                        <a class="thumbnail__link sub-title" target="_blank"
+                                           rel="nofollow noopener"
+                                           href="<?php the_field('project_site-link');?>">Перейти на сайт</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </li>
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
+                <!-- THE END OF ALL POSTS-->
+            </div>
+        </div>
+        <img class="brushstrokes projects__brushstrokes--bottom"
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
+    </section>
 <!--    PROJECTS END-->
-
 <!--    BLOG-->
 <section class="blog">
     <div class="container">
