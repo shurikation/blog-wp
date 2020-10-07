@@ -4,6 +4,7 @@ add_action('wp_enqueue_scripts', 'blog_scripts');
 
 function blog_styles() {
     wp_enqueue_style('blog-style', get_stylesheet_uri());
+    wp_enqueue_style('prism-style', get_template_directory_uri() . '/prism.css');
 }
 
 function blog_scripts() {

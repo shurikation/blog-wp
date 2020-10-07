@@ -1,6 +1,11 @@
 /**
  * Theme Name:  Shurikation Blog Theme
  */
+
+code {
+    background-color: #f2f2f2;
+}
+
 .preloader {
     position: fixed;
     left: 0;
@@ -179,6 +184,11 @@ input[type=email], textarea {
     padding: 0 15px
 }
 
+.post-container {
+    margin: 0 auto;
+    padding: 0 10px
+}
+
 .logo {
     color: #fff;
     font-weight: 700;
@@ -194,9 +204,9 @@ input[type=email], textarea {
 }
 
 .main-title, .sub-title {
-    color: #373636;
+    color: #282828;
     text-align: center;
-    padding-top: 5px
+    padding-top: 10px
 }
 
 .main-title, .main-title:hover {
@@ -208,14 +218,15 @@ input[type=email], textarea {
 }
 
 .sub-title {
-    font-size: 18px
+    font-size: 22px
 }
 
 .main-text {
-    color: #373636;
+    color: #282828;
     text-align: justify;
-    line-height: 1.3em;
-    padding: 5px 0
+    line-height: 1.4em;
+    padding: 5px 0;
+    font-size: 18px;
 }
 
 .button {
@@ -244,9 +255,25 @@ input[type=email], textarea {
     text-align: left
 }
 
+.language-javascript {
+    border-radius: 5px;
+}
+
+.lst-s {
+    list-style-type: square;
+}
+
+.pl-23 {
+    padding-left: 23px;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px
+    }
+
+    .post-container {
+        max-width: 500px
     }
 
     .main-title {
@@ -254,13 +281,18 @@ input[type=email], textarea {
     }
 
     .sub-title {
-        font-size: 19px
+        padding-top: 20px;
+        font-size: 24px
     }
 }
 
 @media (min-width: 768px) {
     .container {
         max-width: 720px
+    }
+
+    .post-container {
+        max-width: 680px
     }
 
     .logo {
@@ -270,11 +302,19 @@ input[type=email], textarea {
     .button {
         font-size: 18px
     }
+
+    .main-text {
+        font-size: 20px
+    }
 }
 
 @media (min-width: 992px) {
     .container {
         max-width: 960px
+    }
+
+    .post-container {
+        max-width: 800px
     }
 
     .main-title {
@@ -283,13 +323,9 @@ input[type=email], textarea {
     }
 
     .sub-title {
-        font-size: 20px;
-        padding-top: 20px
+        padding-top: 35px
     }
 
-    .main-text {
-        font-size: 17px
-    }
 }
 
 @media (min-width: 1200px) {
@@ -297,22 +333,36 @@ input[type=email], textarea {
         max-width: 1140px
     }
 
+    .post-container {
+        max-width: 900px
+    }
+
     .main-title {
         font-size: 30px
     }
 
     .sub-title {
-        font-size: 22px
+        padding-top: 50px;
+        font-size: 26px
     }
 
     .main-text {
-        font-size: 18px
+        font-size: 21px;
+        line-height: 1.5em
     }
 }
 
 @media (min-width: 1600px) {
     .container {
         max-width: 1440px
+    }
+
+    .post-container {
+        max-width: 1200px
+    }
+
+    .main-text {
+        font-size: 22px
     }
 }
 
@@ -832,7 +882,6 @@ input[type=email], textarea {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 0;
     left: 0
 }
 
@@ -871,6 +920,12 @@ input[type=email], textarea {
     flex-direction: column
 }
 
+@media (min-width: 768px) {
+    .description__link:before {
+        top: 8px
+    }
+}
+
 @media (min-width: 992px) {
     .about__title {
         padding-top: 0
@@ -905,6 +960,10 @@ input[type=email], textarea {
     .about .container {
         max-width: 900px
     }
+
+    .description__link:before {
+        top: 10px
+    }
 }
 
 .projects {
@@ -926,6 +985,11 @@ input[type=email], textarea {
 
 .projects__thumbnail {
     margin: 30px auto 0
+}
+
+.project__wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .thumbnail {
@@ -1054,6 +1118,9 @@ input[type=email], textarea {
     }
 }
 
+@media (min-width: 768px) {
+}
+
 @media (min-width: 992px) {
 
     .projects__content {
@@ -1063,6 +1130,10 @@ input[type=email], textarea {
 
     .projects__thumbnail {
         padding: 0 .5rem
+    }
+
+    .project__wrapper {
+        flex-direction: row;
     }
 }
 
@@ -1081,7 +1152,8 @@ input[type=email], textarea {
 }
 
 .single-post__image {
-    margin: 0 auto
+    margin: 0 auto;
+    /*width: 512px*/
 }
 
 .single-post__title {
@@ -1093,8 +1165,17 @@ input[type=email], textarea {
     padding-top: 3px
 }
 
+.single-post__title:hover {
+    color: #099000
+}
+
 .single-post__text {
     padding: 7px 0
+}
+
+.single-post__link {
+    font-style: italic;
+    text-decoration: underline
 }
 
 .single-post__button {
@@ -1170,11 +1251,6 @@ input[type=email], textarea {
 }
 
 @media (min-width: 992px) {
-    .post-container {
-        margin: 0 auto;
-        max-width: 830px
-    }
-
     .single-post {
         flex-direction: row
     }

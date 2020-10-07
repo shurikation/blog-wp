@@ -46,7 +46,9 @@ get_header();
                             <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
                                  alt="<?php the_field('blog_alt'); ?>">
                             <div class="single-post__info">
-                                <h2 class="single-post__title"><?php the_title(); ?></h2>
+                                <a target="_blank" rel="noopener" href="<?php echo get_permalink(); ?>">
+                                    <h2 class="single-post__title"><?php the_title(); ?></h2>
+                                </a>
                                 <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
                                 <a class="single-post__button button" target="_blank" rel="noopener"
                                    href="<?php echo get_permalink(); ?>">Далее</a>

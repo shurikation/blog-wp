@@ -140,7 +140,7 @@ get_header();
         <img class="brushstrokes projects__brushstrokes--bottom"
              src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
     </section>
-<!--    PROJECTS END-->
+<!--    PROJECTS ENDS-->
 <!--    BLOG-->
 <section class="blog">
     <div class="container">
