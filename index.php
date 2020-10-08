@@ -104,12 +104,12 @@ get_header();
                                                 href="<?php echo get_permalink();?>">Описание проекта</a></li>
                                     <li class="thumbnail__item">
                                         <a class="thumbnail__link git-href sub-title"
-                                           target="_blank" rel="nofollow noopener"
+                                           target="_blank" rel="nofollow noopener norefferer"
                                            href="<?php the_field('project_git-link'); ?>">Код на
                                             GitHub</a></li>
                                     <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
                                         <a class="thumbnail__link sub-title" target="_blank"
-                                           rel="nofollow noopener"
+                                           rel="nofollow noopener norefferer"
                                            href="<?php the_field('project_site-link');?>">Перейти на сайт</a></li>
                                 </ul>
                             </nav>

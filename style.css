@@ -863,11 +863,14 @@ input[type=email], textarea {
     font-weight: 700
 }
 
+.description__list {
+    margin-top: auto;
+}
+
 .description__link {
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 20px;
     text-decoration: underline;
     font-style: normal;
     transition: color var(--hover-transition)
