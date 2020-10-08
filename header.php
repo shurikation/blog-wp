@@ -17,11 +17,11 @@
 <header class="main-header">
     <div class="container">
         <nav class="main-header__nav nav">
-            <span class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span>
+            <a href="<?php echo home_url();?>"><span class="main-header__logo logo">&lt;&Alpha;&Rho;&#47;&#62;</span></a>
             <div class="main-header__menu menu">
                 <div class="container">
                     <?php
-                    wp_nav_menu( [
+                    wp_nav_menu([
                         'menu'            => 'Main', //Название меню в админке
                         'container'       => false, //div или nav или false
                         'menu_class'      => 'menu__list', //class в <ul>
@@ -29,7 +29,7 @@
                         'fallback_cb'     => 'wp_page_menu',
                         'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
                         'depth'           => 1, //уровень вложенности меню
-                    ] );
+                    ]);
                     ?>
                 </div>
             </div>

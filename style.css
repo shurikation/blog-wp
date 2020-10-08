@@ -195,6 +195,10 @@ input[type=email], textarea {
     font-size: 18px
 }
 
+.logo:hover {
+    color: #099000
+}
+
 .collapsed {
     display: none !important
 }
@@ -207,14 +211,6 @@ input[type=email], textarea {
     color: #282828;
     text-align: center;
     padding-top: 10px
-}
-
-.main-title, .main-title:hover {
-    transition: all var(--hover-transition)
-}
-
-.main-title:hover {
-    color: #099000
 }
 
 .sub-title {
@@ -256,15 +252,15 @@ input[type=email], textarea {
 }
 
 .language-javascript {
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .lst-s {
-    list-style-type: square;
+    list-style-type: square
 }
 
 .pl-23 {
-    padding-left: 23px;
+    padding-left: 23px
 }
 
 @media (min-width: 576px) {
@@ -982,6 +978,12 @@ input[type=email], textarea {
 .projects__title {
     color: #c1c1c1
 }
+
+.projects__title:hover,
+.blog__title:hover {
+    color: #099000
+}
+
 
 .projects__thumbnail {
     margin: 30px auto 0

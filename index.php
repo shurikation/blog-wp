@@ -13,21 +13,6 @@ get_header();
                     <div class="dash">|</div>
                     <br><a class="button intro__button" href="#works">Мои проекты</a></div>
                 <ul class="intro__socials socials">
-                    <li><a target="_blank" rel="nofollow noopener" href="https://facebook.com/shurikation">
-                            <svg class="intro__icon icon fb" viewBox="0 0 291.319 291.319">
-                                <path class="icon__circle fb__circle"
-                                      d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659S0,226.109,0,145.66C0,65.219,65.21,0,145.659,0z"/>
-                                <path class="icon__symbol fb__symbol"
-                                      d="M163.394,100.277h18.772v-27.73h-22.067v0.1c-26.738,0.947-32.218,15.977-32.701,31.763h-0.055v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366C154.791,104.556,158.341,100.277,163.394,100.277z"/>
-                            </svg>
-                        </a></li>
-                    <li><a target="_blank" rel="nofollow noopener" href="#">
-                            <svg class="intro__icon icon twitter" viewBox="0 0 112.197 112.197">
-                                <circle class="icon__circle twitter__circle" cx="56.099" cy="56.098" r="56.098"/>
-                                <path class="icon__symbol twitter__symbol"
-                                      d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z"/>
-                            </svg>
-                        </a></li>
                     <li><a target="_blank" rel="nofollow noopener" href="https://vk.com/popovalex">
                             <svg class="intro__icon icon vk" viewBox="0 0 192 192">
                                 <rect class="icon__circle vk__circle" width="192" height="192" rx="32"/>
@@ -145,7 +130,7 @@ get_header();
 <section class="blog">
     <div class="container">
         <a target="_blank" rel="noopener" href="<?php echo get_permalink();?>blog">
-            <h2 class="main-title">&lt;Блог&#47;&#62;</h2>
+            <h2 class="main-title blog__title">&lt;Блог&#47;&#62;</h2>
         </a>
         <div class="blog__content">
             <!--ALL POSTS IN LOOP-->
@@ -165,9 +150,12 @@ get_header();
                     <img class="single-post__image" src="<?php the_field('blog_img');?>"
                                                     alt="<?php the_field('blog_alt');?>">
                     <div class="single-post__info">
-                        <h3 class="single-post__title"><?php the_title();?></h3>
+                        <a href="<?php echo get_permalink();?>">
+                            <h3 class="single-post__title"><?php the_title();?></h3>
+                        </a>
                         <p class="main-text single-post__text"><?php the_field('blog_text');?></p>
-                        <a class="single-post__button button" target="_blank" rel="noopener"
+                        <a class="single-post__button button"
+                           target="_blank" rel="noopener"
                            href="<?php echo get_permalink();?>">Далее</a>
                     </div>
                 </div>
