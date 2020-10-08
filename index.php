@@ -66,8 +66,6 @@ get_header();
                             </ul>
                         </address>
                     </div>
-                    <a class="button about__button" target="_blank" rel="noopener"
-                       href="assets/docs/resume_popov_as.pdf">Открыть резюме</a></div>
             </div>
         </div>
     </section>
