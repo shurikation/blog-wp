@@ -46,11 +46,11 @@ get_header();
                             <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
                                  alt="<?php the_field('blog_alt'); ?>">
                             <div class="single-post__info">
-                                <a target="_blank" rel="noopener" href="<?php echo get_permalink(); ?>">
+                                <a target="_blank" href="<?php echo get_permalink(); ?>">
                                     <h2 class="single-post__title"><?php the_title(); ?></h2>
                                 </a>
                                 <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
-                                <a class="single-post__button button" target="_blank" rel="noopener"
+                                <a class="single-post__button button" target="_blank"
                                    href="<?php echo get_permalink(); ?>">Далее</a>
                             </div>
                         </article>
@@ -60,7 +60,7 @@ get_header();
                 wp_reset_postdata();
                 ?>
             </section>
-            <!--            PAGE NAVIGATION-->
+            <!--            PAGINATION-->
             <?php if ($wp_query->max_num_pages > 1) : // if there's more than one page turn on pagination ?>
                 <nav class="template__pagination">
                     <ul class="pagination__list">

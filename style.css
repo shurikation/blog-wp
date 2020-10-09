@@ -18,9 +18,9 @@ code {
 
 .preloader__row {
     display: block;
-    width: 100px;
-    height: 100px;
-    margin: 33vh auto
+    width: 125px;
+    height: 125px;
+    margin: 40vh auto
 }
 
 .preloader__row:after {
@@ -31,7 +31,7 @@ code {
     border-radius: 50%;
     border-color: #259000 transparent;
     border-style: solid;
-    border-width: 6px;
+    border-width: 10px;
     animation: Spin 1.2s linear infinite
 }
 
@@ -213,8 +213,14 @@ input[type=email], textarea {
     padding-top: 10px
 }
 
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sub-title {
-    font-size: 22px
+    font-size: 20px
 }
 
 .main-text {
@@ -259,8 +265,8 @@ input[type=email], textarea {
     list-style-type: square
 }
 
-.pl-23 {
-    padding-left: 23px
+.pl-30 {
+    padding-left: 30px
 }
 
 @media (min-width: 576px) {
@@ -269,17 +275,13 @@ input[type=email], textarea {
     }
 
     .post-container {
-        max-width: 500px
+        max-width: 470px
     }
 
     .main-title {
         font-size: 26px
     }
 
-    .sub-title {
-        padding-top: 20px;
-        font-size: 24px
-    }
 }
 
 @media (min-width: 768px) {
@@ -288,7 +290,7 @@ input[type=email], textarea {
     }
 
     .post-container {
-        max-width: 680px
+        max-width: 650px
     }
 
     .logo {
@@ -310,7 +312,7 @@ input[type=email], textarea {
     }
 
     .post-container {
-        max-width: 800px
+        max-width: 890px
     }
 
     .main-title {
@@ -319,7 +321,8 @@ input[type=email], textarea {
     }
 
     .sub-title {
-        padding-top: 35px
+        padding-top: 35px;
+        font-size: 22px
     }
 
 }
@@ -330,7 +333,7 @@ input[type=email], textarea {
     }
 
     .post-container {
-        max-width: 900px
+        max-width: 950px
     }
 
     .main-title {
@@ -339,7 +342,6 @@ input[type=email], textarea {
 
     .sub-title {
         padding-top: 50px;
-        font-size: 26px
     }
 
     .main-text {
@@ -354,11 +356,15 @@ input[type=email], textarea {
     }
 
     .post-container {
-        max-width: 1200px
+        max-width: 1100px
     }
 
     .main-text {
         font-size: 22px
+    }
+
+    .sub-title {
+        font-size: 24px
     }
 }
 
@@ -429,8 +435,9 @@ input[type=email], textarea {
 }
 
 .icon {
-    width: 35px;
-    height: 35px
+    width: 37px;
+    height: 37px;
+    padding: 0 15px
 }
 
 .icon__circle {
@@ -497,19 +504,25 @@ input[type=email], textarea {
     fill: #fff
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .icon {
-        padding: 0 15px;
         width: 40px;
         height: 40px
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .icon {
-        padding: 0 15px;
         width: 45px;
         height: 45px
+    }
+}
+
+@media (min-width: 1200px) {
+    .icon {
+        padding: 0 30px;
+        width: 50px;
+        height: 50px
     }
 }
 
@@ -751,25 +764,6 @@ input[type=email], textarea {
     display: none
 }
 
-@media (max-height: 500px) {
-    .intro__wrapper {
-        padding-top: 180px
-    }
-
-    .intro__socials {
-        display: flex;
-        flex-direction: row
-    }
-
-    .intro__socials:after, .intro__socials:before {
-        display: none
-    }
-
-    .intro__icon {
-        padding: 0 5px
-    }
-}
-
 @media (min-width: 576px) {
     .intro__socials {
         position: relative;
@@ -779,7 +773,7 @@ input[type=email], textarea {
 
     .intro__socials:after, .intro__socials:before {
         position: absolute;
-        content: "";
+        /*content: "";*/
         width: 2px;
         height: 30px;
         background-color: #555
@@ -796,7 +790,7 @@ input[type=email], textarea {
     }
 
     .intro__icon {
-        padding: 15px 0
+        padding: 30px 0
     }
 
     .intro__title {
@@ -845,6 +839,11 @@ input[type=email], textarea {
     padding: 20px 0
 }
 
+.about__info {
+    display: flex;
+    flex-direction: column
+}
+
 .about__image {
     margin: 0 auto;
     max-width: 80%;
@@ -855,28 +854,28 @@ input[type=email], textarea {
     margin-top: 20px
 }
 
-.description__text {
-    margin-bottom: 10px
+.about__text {
+    color: #282828;
+    text-align: justify;
+    line-height: 1.3em;
+    padding-bottom: 10px;
 }
 
-.description__text span {
+.about__text span {
     font-weight: 700
 }
 
-.description__list {
-    margin-top: auto;
-}
-
-.description__link {
+.about__link {
+    color: #282828;
     display: inline-block;
     position: relative;
-    padding-left: 30px;
     text-decoration: underline;
     font-style: normal;
+    font-weight: 500;
     transition: color var(--hover-transition)
 }
 
-.description__link:before {
+.about__link:before {
     content: "";
     position: absolute;
     width: 25px;
@@ -884,13 +883,9 @@ input[type=email], textarea {
     left: 0
 }
 
-.description__link:hover {
+.about__link:hover {
     color: #099000;
     transition: color var(--hover-transition)
-}
-
-.description__link--medium {
-    text-decoration: underline
 }
 
 .email-link:before {
@@ -914,24 +909,20 @@ input[type=email], textarea {
     align-self: flex-start
 }
 
-.about__info {
-    display: flex;
-    flex-direction: column
-}
-
 @media (min-width: 768px) {
-    .description__link:before {
-        top: 8px
+    .about__text {
+        font-size: 17px;
+    }
+    .about__link:before {
+        width: 27px;
+        height: 27px;
+        left: -3px
     }
 }
 
 @media (min-width: 992px) {
     .about__title {
         padding-top: 0
-    }
-
-    .about .container {
-        max-width: 830px
     }
 
     .about__content {
@@ -950,18 +941,24 @@ input[type=email], textarea {
         margin-top: 0
     }
 
+    .about__text {
+        font-size: 18px;
+    }
+
     .project-image {
         height: 100%
     }
 }
 
 @media (min-width: 1200px) {
-    .about .container {
-        max-width: 900px
+    .about__text {
+        font-size: 19px;
     }
 
-    .description__link:before {
-        top: 10px
+    .about__link:before {
+        width: 30px;
+        height: 30px;
+        left: -6px
     }
 }
 
@@ -981,12 +978,6 @@ input[type=email], textarea {
 .projects__title {
     color: #c1c1c1
 }
-
-.projects__title:hover,
-.blog__title:hover {
-    color: #099000
-}
-
 
 .projects__thumbnail {
     margin: 30px auto 0
@@ -1091,8 +1082,7 @@ input[type=email], textarea {
 .git-href:before {
     position: absolute;
     content: "";
-    top: 31px;
-    left: -33px;
+    left: -30px;
     background: url(assets/about/github.svg);
     width: 25px;
     height: 25px
@@ -1361,5 +1351,29 @@ input[type=email], textarea {
 
     .footer__copyright {
         font-size: 18px
+    }
+}
+
+@media (max-height: 576px) and (orientation: landscape) {
+    .intro__wrapper {
+        padding-top: 160px;
+    }
+
+    .intro__content {
+        margin-top: -140px;
+    }
+
+    .intro__socials {
+        display: flex;
+        position: relative;
+        flex-direction: row
+    }
+
+    .intro__socials:after, .intro__socials:before {
+        display: none
+    }
+
+    .intro__icon {
+        padding: 0 20px
     }
 }

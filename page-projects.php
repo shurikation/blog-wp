@@ -41,7 +41,10 @@ get_header();
                         $custom_query->the_post(); ?>
 
                         <li class="projects__thumbnail thumbnail">
-                            <h2 class="sub-title"><?php the_title(); ?></h2>
+                            <a class="thumbnail__link sub-title" target="_blank"
+                               href="<?php echo get_permalink(); ?>">
+                                <h2 class="sub-title"><?php the_title(); ?></h2>
+                            </a>
                             <div class="thumbnail__content">
                                 <img class="thumbnail__image" src="<?php the_field('project_img'); ?>" alt="проект">
                                 <nav class="thumbnail__overlay">
@@ -57,7 +60,8 @@ get_header();
                                         <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
                                             <a class="thumbnail__link sub-title" target="_blank"
                                                rel="nofollow noopener"
-                                               href="<?php the_field('project_site-link'); ?>">Перейти на сайт</a></li>
+                                               href="<?php the_field('project_site-link'); ?>">Перейти на сайт</a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
