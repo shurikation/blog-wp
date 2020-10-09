@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Александр Попов | Фронтенд-разработчик</title>
+    <title>Александр Попов | Веб-разработчик</title>
     <?php
         wp_head();
     ?>
 </head>
-<body class="main-page">
+<body>
 <aside class="preloader">
     <div class="preloader__row"></div>
 </aside>
-<div id="loader" class="loader hide"></div>
+<!--<div id="loader" class="loader hide"></div>-->
 <header class="main-header">
     <div class="container">
         <nav class="main-header__nav nav">
