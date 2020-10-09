@@ -1,17 +1,19 @@
 <?php
 get_header();
 ?>
-<main class="main">
-    <section class="intro main__intro">
+<main class="main-page">
+    <section class="intro">
         <div class="container">
             <div class="intro__wrapper">
-                <div>
+                <div class="intro__content">
                     <h1 class="intro__title hidden">Блог веб-разработчика</h1>
                     <h2 class="intro__subtitle hidden">Фронтенд-разработчик Александр Попов</h2>
                     <h3 class="intro__title">Александр Попов</h3>
                     <p class="intro__subtitle intro__subtitle--autoText"></p>
                     <div class="dash">|</div>
-                    <br><a class="button intro__button" href="#works">Мои проекты</a></div>
+                    <br>
+                    <a class="button intro__button" href="#projects">Мои проекты</a>
+                </div>
                 <ul class="intro__socials socials">
                     <li><a target="_blank" rel="nofollow noopener" href="https://vk.com/popovalex">
                             <svg class="intro__icon icon vk" viewBox="0 0 192 192">
@@ -46,37 +48,62 @@ get_header();
     <section class="about main__about" id="about">
         <img class="brushstrokes about__brushstrokes"
              src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush strokes">
-        <div class="container">
+        <div class="post-container">
             <h2 class="about__title main-title"><?php the_field('about_title'); ?></h2>
             <div class="about__content">
-                <img class="about__image" src="<?php the_field('about_img'); ?>" alt="shurikation">
+                <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/about/profile.jpg"
+                     alt="александр попов веб-разработчик">
                 <div class="about__info">
                     <div class="about__description">
-                        <p class="description__text main-text">
-                            <?php the_field('about_descr'); ?>
+                        <p class="about__text">
+                            Приветствую, это Александр. Я занимаюсь разработкой фронтенд-приложений.
+                            Основной стэк технологий: <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, <code>React</code>, <code>Redux</code>.
+                            Ознакомиться с моими работами можно в разделе
+                            <a class="about__link" target="_blank"
+                               href="<?php echo get_permalink(); ?>projects">&laquo;Проекты&raquo;</a>.
+
                         </p>
-                        <h3 class="description__text main-text">Контакты:</h3>
+                        <p class="about__text">
+                            Понимаю программирование как отдельное ремесло, в котором стараюсь постоянно совершенствоваться и
+                            реализовывать свой потенциал в создании полезных для людей приложений.
+                        </p>
+                        <p class="about__text">
+                            Как self-taught разработчик умею самостоятельно находить ответы на вопросы, изучать технологии и
+                            грамотно планировать свое время.
+                        </p>
+                        <p class="about__text">
+                            Практикую английский язык примерно на уровне Intermediate. Перевожу
+                            понравившиеся статьи на тему фронтенда, иногда пишу собственные.
+                            Все публикации в моём
+                            <a class="about__link" target="_blank"
+                               href="<?php echo get_permalink(); ?>projects">блоге</a>.
+                        </p>
+                        <p class="about__text">Лучший способ связаться со мной:</p>
                         <address>
                             <ul>
-                                <li><a class="description__link email-link main-text" target="_blank"
+<!--                                <li>-->
+<!--                                    <a class="about__link email-link about__text" target="_blank"-->
+<!--                                       rel="nofollow noopener"-->
+<!--                                       href="mailto:rupopovalex@gmail.com">rupopovalex@gmail.com</a>-->
+<!--                                </li>-->
+                                <li>
+                                    <a class="about__link telegram-link about__text pl-30" target="_blank"
                                        rel="nofollow noopener"
-                                       href="mailto:rupopovalex@gmail.com"><?php the_field('mail', 2); ?></a></li>
-                                <li><a class="description__link telegram-link main-text" target="_blank"
-                                       rel="nofollow noopener" href="https://t.me/shurikation">@shurikation</a></li>
+                                       href="https://t.me/shurikation">@shurikation</a>
+                                </li>
+<!--                                МОЖНО СДЕЛАТЬ КНОПКУ "ПОКАЗАТЬ ТЕЛЕФОН", которая по клику - вжух! и ичезает и видно телефон.-->
                             </ul>
                         </address>
                     </div>
+                </div>
             </div>
-        </div>
     </section>
-<!--    PROJECTS-->
-    <section class="projects main__projects">
+    <!--    PROJECTS-->
+    <section id="projects" class="projects">
         <img class="brushstrokes projects__brushstrokes--top"
              src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
         <div class="container">
-            <a target="_blank" rel="noopener" href="<?php echo get_permalink();?>projects">
-                <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
-            </a>
+            <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
             <div class="projects__content">
                 <!--ALL POSTS IN THE LOOP-->
                 <?php
@@ -92,14 +119,19 @@ get_header();
                     setup_postdata($post);
                     ?>
                     <li class="projects__thumbnail thumbnail">
-                        <h3 class="thumbnail__title sub-title"><?php the_title();?></h3>
+                        <a class="thumbnail__link sub-title" target="_blank"
+                           href="<?php echo get_permalink(); ?>">
+                            <h3 class="thumbnail__title sub-title"><?php the_title(); ?></h3>
+                        </a>
                         <div class="thumbnail__content">
-                            <img class="thumbnail__image" src="<?php the_field('project_img');?>" alt="скриншот проекта">
+                            <img class="thumbnail__image" src="<?php the_field('project_img'); ?>"
+                                 alt="скриншот проекта">
                             <nav class="thumbnail__overlay">
                                 <ul class="thumbnail__list">
-                                    <li class="thumbnail__item thumbnail__item--top fromTopToBottom"><a
-                                                class="thumbnail__link sub-title" target="_blank" rel="noopener"
-                                                href="<?php echo get_permalink();?>">Описание проекта</a></li>
+                                    <li class="thumbnail__item thumbnail__item--top fromTopToBottom">
+                                        <a class="thumbnail__link sub-title" target="_blank"
+                                           href="<?php echo get_permalink(); ?>">Описание проекта</a>
+                                    </li>
                                     <li class="thumbnail__item">
                                         <a class="thumbnail__link git-href sub-title"
                                            target="_blank" rel="nofollow noopener norefferer"
@@ -108,7 +140,7 @@ get_header();
                                     <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
                                         <a class="thumbnail__link sub-title" target="_blank"
                                            rel="nofollow noopener norefferer"
-                                           href="<?php the_field('project_site-link');?>">Перейти на сайт</a></li>
+                                           href="<?php the_field('project_site-link'); ?>">Перейти на сайт</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -123,55 +155,54 @@ get_header();
         <img class="brushstrokes projects__brushstrokes--bottom"
              src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
     </section>
-<!--    PROJECTS ENDS-->
-<!--    BLOG-->
-<section class="blog">
-    <div class="container">
-        <a target="_blank" rel="noopener" href="<?php echo get_permalink();?>blog">
+    <!--    PROJECTS ENDS-->
+    <!--    BLOG-->
+    <section class="blog">
+        <div class="container">
             <h2 class="main-title blog__title">&lt;Блог&#47;&#62;</h2>
-        </a>
-        <div class="blog__content">
-            <!--ALL POSTS IN LOOP-->
-            <?php
-            $posts = get_posts(array(
-                'numberposts' => 3, //чтобы вывести последние 3 поста
-                'category_name' => 'blog', //выводим только рубрику blog
-                'orderby' => 'date',
-                'order' => 'DESC', //DESC - прямой порядок, ASC - обратный порядок
-                'post_type' => 'post',
-                'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-            ));
-            foreach ($posts as $post) {
-                setup_postdata($post);
-                ?>
-                <div class="blog__single-post single-post">
-                    <img class="single-post__image" src="<?php the_field('blog_img');?>"
-                                                    alt="<?php the_field('blog_alt');?>">
-                    <div class="single-post__info">
-                        <a href="<?php echo get_permalink();?>">
-                            <h3 class="single-post__title"><?php the_title();?></h3>
-                        </a>
-                        <p class="main-text single-post__text"><?php the_field('blog_text');?></p>
-                        <a class="single-post__button button"
-                           target="_blank" rel="noopener"
-                           href="<?php echo get_permalink();?>">Далее</a>
-                    </div>
-                </div>
+            <div class="blog__content">
+                <!--ALL POSTS IN LOOP-->
                 <?php
-            }
+                $posts = get_posts(array(
+                    'numberposts' => 3, //чтобы вывести последние 3 поста
+                    'category_name' => 'blog', //выводим только рубрику blog
+                    'orderby' => 'date',
+                    'order' => 'DESC', //DESC - прямой порядок, ASC - обратный порядок
+                    'post_type' => 'post',
+                    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                ));
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+                    ?>
+                    <div class="blog__single-post single-post">
+                        <img class="single-post__image" src="<?php the_field('blog_img'); ?>"
+                             alt="<?php the_field('blog_alt'); ?>">
+                        <div class="single-post__info">
+                            <a target="_blank"
+                               href="<?php echo get_permalink(); ?>">
+                                <h3 class="single-post__title"><?php the_title(); ?></h3>
+                            </a>
+                            <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
+                            <a class="single-post__button button"
+                               target="_blank"
+                               href="<?php echo get_permalink(); ?>">Далее</a>
+                        </div>
+                    </div>
+                    <?php
+                }
                 wp_reset_postdata();
-            ?>
-            <!-- THE END OF ALL POSTS-->
-            <!-- BUTTON-LINK TO ALL POSTS-->
-            <div class="blog__button-wrapper">
-                <a class="blog__button button" target="_blank" rel="noopener"
-                   href="<?php echo get_permalink();?>blog">Все публикации...</a>
+                ?>
+                <!-- THE END OF ALL POSTS-->
+                <!-- BUTTON-LINK TO ALL POSTS-->
+                <div class="blog__button-wrapper">
+                    <a class="blog__button button" target="_blank"
+                       href="<?php echo get_permalink(); ?>blog">Все публикации...</a>
+                </div>
+                <!-- BUTTON ENDS-->
             </div>
-            <!-- BUTTON ENDS-->
         </div>
-    </div>
     </section>
-<!--    BLOG ENDS-->
+    <!--    BLOG ENDS-->
 </main>
 <?php
 get_footer();
