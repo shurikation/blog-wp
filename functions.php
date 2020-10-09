@@ -44,6 +44,11 @@ function filter_nav_menu_list_attributes( $atts, $item, $args ){
         if( $item->ID === 56 && (in_category('blog'))) {
             $atts['class'] .= ' menu__item--active';
         }
+
+        if($item->ID === 57 && in_category('projects')) {
+            $atts['class'] .= ' menu__item--active';
+        }
+
         //чтобы подсвечивать активную ссылку
         if ($item->current) //если текущая страница, на которой находимся, является активной, то берем ссылку и назначаем ей новый класс
         {
