@@ -3,8 +3,8 @@ add_action('wp_enqueue_scripts', 'blog_styles');
 add_action('wp_enqueue_scripts', 'blog_scripts');
 
 function blog_styles() {
-    wp_enqueue_style('blog-style', get_stylesheet_uri());
-    wp_enqueue_style('prism-style', get_template_directory_uri() . '/prism.styles');
+    wp_enqueue_style('blog-style', get_stylesheet_directory_uri() . '/assets/styles/style.css');
+    wp_enqueue_style('prism-style', get_stylesheet_directory_uri()  . '/assets/styles/prism.css');
 }
 
 function blog_scripts() {
