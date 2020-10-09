@@ -45,13 +45,14 @@ get_header();
             </div>
         </div>
     </section>
+<!--    ABOUT-->
     <section class="about main__about" id="about">
         <img class="brushstrokes about__brushstrokes"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush strokes">
+             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
         <div class="post-container">
             <h2 class="about__title main-title"><?php the_field('about_title'); ?></h2>
             <div class="about__content">
-                <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/about/profile.jpg"
+                <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/images/profile.jpg"
                      alt="александр попов веб-разработчик">
                 <div class="about__info">
                     <div class="about__description">
@@ -61,37 +62,32 @@ get_header();
                             Ознакомиться с моими работами можно в разделе
                             <a class="about__link" target="_blank"
                                href="<?php echo get_permalink(); ?>projects">&laquo;Проекты&raquo;</a>.
-
-                        </p>
-                        <p class="about__text">
-                            Понимаю программирование как отдельное ремесло, в котором стараюсь постоянно совершенствоваться и
-                            реализовывать свой потенциал в создании полезных для людей приложений.
-                        </p>
-                        <p class="about__text">
-                            Как self-taught разработчик умею самостоятельно находить ответы на вопросы, изучать технологии и
-                            грамотно планировать свое время.
                         </p>
                         <p class="about__text">
                             Практикую английский язык примерно на уровне Intermediate. Перевожу
                             понравившиеся статьи на тему фронтенда, иногда пишу собственные.
                             Все публикации в моём
                             <a class="about__link" target="_blank"
-                               href="<?php echo get_permalink(); ?>projects">блоге</a>.
+                               href="<?php echo get_permalink(); ?>blog">блоге</a>.
                         </p>
-                        <p class="about__text">Лучший способ связаться со мной:</p>
+                        <p class="about__text">
+                           Воспринимаю программирование как дело, требующее серьезного подхода и навыков,
+                           в котором стараюсь постоянно совершенствоваться.
+                           Хочу реализовывать свой потенциал в создании полезных для людей приложений.
+                        </p>
+                        <p class="about__text">Связаться со мной:</p>
                         <address>
                             <ul>
-<!--                                <li>-->
-<!--                                    <a class="about__link email-link about__text" target="_blank"-->
-<!--                                       rel="nofollow noopener"-->
-<!--                                       href="mailto:rupopovalex@gmail.com">rupopovalex@gmail.com</a>-->
-<!--                                </li>-->
                                 <li>
                                     <a class="about__link telegram-link about__text pl-30" target="_blank"
                                        rel="nofollow noopener"
                                        href="https://t.me/shurikation">@shurikation</a>
                                 </li>
-<!--                                МОЖНО СДЕЛАТЬ КНОПКУ "ПОКАЗАТЬ ТЕЛЕФОН", которая по клику - вжух! и ичезает и видно телефон.-->
+                                <li>
+                                    <a class="about__link email-link about__text pl-30" target="_blank"
+                                       rel="nofollow noopener"
+                                       href="mailto:rupopovalex@gmail.com">rupopovalex@gmail.com</a>
+                                </li>
                             </ul>
                         </address>
                     </div>
@@ -101,7 +97,7 @@ get_header();
     <!--    PROJECTS-->
     <section id="projects" class="projects">
         <img class="brushstrokes projects__brushstrokes--top"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
+             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
         <div class="container">
             <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
             <div class="projects__content">
@@ -153,7 +149,7 @@ get_header();
             </div>
         </div>
         <img class="brushstrokes projects__brushstrokes--bottom"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="краска">
+             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush strokes">
     </section>
     <!--    PROJECTS ENDS-->
     <!--    BLOG-->

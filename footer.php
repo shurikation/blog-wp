@@ -1,5 +1,7 @@
-<footer class="footer" id="abc"><img class="brushstrokes footer__brushstrokes" src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png"
-                                     alt="краска">
+<footer class="footer" id="abc">
+    <img class="brushstrokes footer__brushstrokes"
+         src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png"
+         alt="brush stroke">
     <div class="container">
         <div class="footer__wrapper">
             <ul class="socials">

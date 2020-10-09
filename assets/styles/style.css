@@ -558,15 +558,10 @@ input[type=email], textarea {
     box-shadow: 0 10px 15px rgba(25, 25, 25, .1)
 }
 
-.header--unfixed {
-    -webkit-animation: fadeInUp .5s ease-in-out 0s 1 forwards;
-    animation: fadeInUp .5s ease-in-out 0s 1 forwards
-}
-
 .main-header__menu {
     position: absolute;
     width: 100%;
-    top: -450%;
+    top: -550%;
     left: 0;
     transition: all .5s ease 0s;
     z-index: -1;
@@ -703,7 +698,7 @@ input[type=email], textarea {
 .intro {
     position: relative;
     height: 100vh;
-    background-image: url(assets/intro/wallpaper.jpg);
+    background-image: url(../images/main-background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25% 0;
@@ -889,19 +884,19 @@ input[type=email], textarea {
 }
 
 .email-link:before {
-    background: url(assets/about/email.svg) no-repeat
+    background: url(../images/email.svg) no-repeat
 }
 
 .telegram-link:before {
-    background: url(assets/about/telegram.svg) no-repeat
+    background: url(../images/telegram.svg) no-repeat
 }
 
 .github-link:before {
-    background: url(assets/about/github.svg) no-repeat
+    background: url(../images/github.svg) no-repeat
 }
 
 .website-link:before {
-    background: url(assets/about/website.svg) no-repeat
+    background: url(../images/website.svg) no-repeat
 }
 
 .about__button {
@@ -1083,7 +1078,7 @@ input[type=email], textarea {
     position: absolute;
     content: "";
     left: -30px;
-    background: url(assets/about/github.svg);
+    background: url(../images/github.svg);
     width: 25px;
     height: 25px
 }

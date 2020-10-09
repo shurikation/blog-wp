@@ -4,7 +4,7 @@
         <h1 class="container intro__title template-title"><?php the_title(); ?></h1>
     </div>
     <img class="brushstrokes about__brushstrokes"
-         src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes-white.png" alt="brush stroke">
+         src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
     <div class="post-container">
         <div id="post-<?php the_ID(); ?>" class="template__content">
             <?php
