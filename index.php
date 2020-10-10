@@ -48,7 +48,7 @@ get_header();
 <!--    ABOUT-->
     <section class="about main__about" id="about">
         <img class="brushstrokes about__brushstrokes"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
+             src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">
         <div class="post-container">
             <h2 class="about__title main-title"><?php the_field('about_title'); ?></h2>
             <div class="about__content">
@@ -98,7 +98,7 @@ get_header();
     <!--    PROJECTS-->
     <section id="projects" class="projects">
         <img class="brushstrokes projects__brushstrokes--top"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
+             src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">
         <div class="container">
             <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
             <div class="projects__content">
@@ -150,8 +150,7 @@ get_header();
             </div>
         </div>
         <img class="brushstrokes projects__brushstrokes--bottom"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush strokes">
-    </section>
+             src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">    </section>
     <!--    PROJECTS ENDS-->
     <!--    BLOG-->
     <section class="blog">

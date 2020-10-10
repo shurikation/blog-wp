@@ -13,7 +13,7 @@ get_header();
             <h1 class="container intro__title template-title">Блог</h1>
         </div>
         <img class="brushstrokes about__brushstrokes"
-             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
+             src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">
         <div class="container">
             <section class="template__content blog">
                 <?php

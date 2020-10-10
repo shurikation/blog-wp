@@ -13,7 +13,6 @@
 <aside class="preloader">
     <div class="preloader__row"></div>
 </aside>
-<!--<div id="loader" class="loader hide"></div>-->
 <header class="main-header">
     <div class="container">
         <nav class="main-header__nav nav">
