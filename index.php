@@ -48,11 +48,11 @@ get_header();
 <!--    ABOUT-->
     <section class="about main__about" id="about">
         <img class="brushstrokes about__brushstrokes"
-             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
         <div class="post-container">
             <h2 class="about__title main-title"><?php the_field('about_title'); ?></h2>
             <div class="about__content">
-                <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/images/profile.jpg"
+                <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/profile.jpg"
                      alt="александр попов веб-разработчик">
                 <div class="about__info">
                     <div class="about__description">
@@ -72,8 +72,9 @@ get_header();
                         </p>
                         <p class="about__text">
                            Воспринимаю программирование как дело, требующее серьезного подхода и навыков,
-                           в котором стараюсь постоянно совершенствоваться.
-                           Хочу реализовывать свой потенциал в создании полезных для людей приложений.
+                            в котором стараюсь постоянно совершенствоваться и развиваться.
+                           Моя цель - реализовать весь свой потенциал в создании приложений, которые
+                           по-настоящему нужны, упрощают жизнь и создают новые возможности.
                         </p>
                         <p class="about__text">Связаться со мной:</p>
                         <address>
@@ -97,7 +98,7 @@ get_header();
     <!--    PROJECTS-->
     <section id="projects" class="projects">
         <img class="brushstrokes projects__brushstrokes--top"
-             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
         <div class="container">
             <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
             <div class="projects__content">
@@ -149,7 +150,7 @@ get_header();
             </div>
         </div>
         <img class="brushstrokes projects__brushstrokes--bottom"
-             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush strokes">
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush strokes">
     </section>
     <!--    PROJECTS ENDS-->
     <!--    BLOG-->

@@ -9,11 +9,11 @@ get_header();
 <main>
     <section class="template__wrapper">
         <div class="intro template__intro"
-             style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/images/projects-background.webp); background-position: 40% 0;">
+             style="background-image: url(<?php echo bloginfo('template_url'); ?>/themes/blog-theme/assets/projects-background.webp); background-position: 40% 0;">
             <h1 class="container intro__title template-title">Проекты</h1>
         </div>
         <img class="brushstrokes about__brushstrokes"
-             src="<?php echo bloginfo('template_url'); ?>/assets/images/brushstrokes.png" alt="brush stroke">
+             src="<?php echo bloginfo('template_url'); ?>/assets/brushstrokes.png" alt="brush stroke">
         <div class="container">
             <ul class="projects__content">
                 <?php
