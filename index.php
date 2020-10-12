@@ -50,7 +50,7 @@ get_header();
         <img class="brushstrokes about__brushstrokes"
              src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">
         <div class="post-container">
-            <h2 class="about__title main-title"><?php the_field('about_title'); ?></h2>
+            <h2 class="about__title heading"><?php the_field('about_title'); ?></h2>
             <div class="about__content">
                 <img class="about__image" src="<?php echo bloginfo('template_url'); ?>/assets/profile.jpg"
                      alt="александр попов веб-разработчик">
@@ -100,7 +100,7 @@ get_header();
         <img class="brushstrokes projects__brushstrokes--top"
              src="<?php echo content_url(); ?>/uploads/brushstrokes.png" alt="brush stroke">
         <div class="container">
-            <h2 class="main-title projects__title">&lt;Проекты&#47;&#62;</h2>
+            <h2 class="heading projects__title">&lt;Проекты&#47;&#62;</h2>
             <div class="projects__content">
                 <!--ALL POSTS IN THE LOOP-->
                 <?php
@@ -116,9 +116,9 @@ get_header();
                     setup_postdata($post);
                     ?>
                     <li class="projects__thumbnail thumbnail">
-                        <a class="thumbnail__link sub-title" target="_blank"
+                        <a class="thumbnail__link subhead" target="_blank"
                            href="<?php echo get_permalink(); ?>">
-                            <h3 class="thumbnail__title sub-title"><?php the_title(); ?></h3>
+                            <h3 class="thumbnail__title subhead"><?php the_title(); ?></h3>
                         </a>
                         <div class="thumbnail__content">
                             <img class="thumbnail__image" src="<?php the_field('project_img'); ?>"
@@ -126,16 +126,16 @@ get_header();
                             <nav class="thumbnail__overlay">
                                 <ul class="thumbnail__list">
                                     <li class="thumbnail__item thumbnail__item--top fromTopToBottom">
-                                        <a class="thumbnail__link sub-title" target="_blank"
+                                        <a class="thumbnail__link subhead" target="_blank"
                                            href="<?php echo get_permalink(); ?>">Описание проекта</a>
                                     </li>
                                     <li class="thumbnail__item">
-                                        <a class="thumbnail__link git-href sub-title"
+                                        <a class="thumbnail__link git-href subhead"
                                            target="_blank" rel="nofollow noopener norefferer"
                                            href="<?php the_field('project_git-link'); ?>">Код на
                                             GitHub</a></li>
                                     <li class="thumbnail__item thumbnail__item--bottom fromBottomToTop">
-                                        <a class="thumbnail__link sub-title" target="_blank"
+                                        <a class="thumbnail__link subhead" target="_blank"
                                            rel="nofollow noopener norefferer"
                                            href="<?php the_field('project_site-link'); ?>">Перейти на сайт</a></li>
                                 </ul>
@@ -155,7 +155,7 @@ get_header();
     <!--    BLOG-->
     <section class="blog">
         <div class="container">
-            <h2 class="main-title blog__title">&lt;Блог&#47;&#62;</h2>
+            <h2 class="heading blog__title">&lt;Блог&#47;&#62;</h2>
             <div class="blog__content">
                 <!--ALL POSTS IN LOOP-->
                 <?php
@@ -178,7 +178,7 @@ get_header();
                                href="<?php echo get_permalink(); ?>">
                                 <h3 class="single-post__title"><?php the_title(); ?></h3>
                             </a>
-                            <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
+                            <p class="text single-post__text"><?php the_field('blog_text'); ?></p>
                             <a class="single-post__button button"
                                target="_blank"
                                href="<?php echo get_permalink(); ?>">Далее</a>

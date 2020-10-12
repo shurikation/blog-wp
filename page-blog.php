@@ -49,7 +49,7 @@ get_header();
                                 <a target="_blank" href="<?php echo get_permalink(); ?>">
                                     <h2 class="single-post__title"><?php the_title(); ?></h2>
                                 </a>
-                                <p class="main-text single-post__text"><?php the_field('blog_text'); ?></p>
+                                <p class="text single-post__text"><?php the_field('blog_text'); ?></p>
                                 <a class="single-post__button button" target="_blank"
                                    href="<?php echo get_permalink(); ?>">Далее</a>
                             </div>
