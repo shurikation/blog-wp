@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
+    <link rel="icon" href="<?php echo bloginfo('template_url'); ?>/favicon.svg" type="image/svg+xml">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
