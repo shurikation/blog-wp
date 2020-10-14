@@ -6,8 +6,8 @@ get_header();
         <div class="container">
             <div class="intro__wrapper">
                 <div class="intro__content">
-                    <h1 class="intro__title hidden">Блог веб-разработчика | Александр Попов</h1>
-                    <h2 class="intro__subtitle hidden">Статьи про фронтенд-разработку, frontend, javascript, html, css, react</h2>
+                    <h1 class="intro__title hidden">Блог веб-разработчика.</h1>
+                    <h2 class="intro__subtitle hidden">Статьи про фронтенд-разработку, JavaScript, HTML, CSS, React. Проекты и примеры кода</h2>
                     <h3 class="intro__title">Александр Попов</h3>
                     <p class="intro__subtitle intro__subtitle--autoText"></p>
                     <div class="dash">|</div>
